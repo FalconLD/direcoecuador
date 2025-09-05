@@ -1,0 +1,17 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Archivos de compilación
+__pycache__/
+*.py[cod]
+
+# Archivos de base de datos local
+db.sqlite3
+
+# Archivos estáticos recolectados
+/staticfiles/
+/media/
+
+# Configuración de VSCode
+.vscode/
