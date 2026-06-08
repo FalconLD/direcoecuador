@@ -13,4 +13,12 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mi_sitio.settings")
 
+if os.environ.get("VERCEL") == "1" and not os.environ.get("DB_HOST"):
+    import django
+
+    django.setup()
+    from django.core.management import call_command
+
+    call_command("migrate", "--noinput")
+
 application = get_wsgi_application()
