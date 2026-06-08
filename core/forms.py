@@ -1,3 +1,5 @@
+# core/forms.py
+
 from django import forms
 from .models import Contacto
 
@@ -6,8 +8,8 @@ class ContactoForm(forms.ModelForm):
         model = Contacto
         fields = ['nombre', 'email', 'telefono', 'mensaje']
         widgets = {
-            'nombre': forms.TextInput(attrs={'placeholder': 'Tu Nombre', 'required': True}),
-            'email': forms.EmailInput(attrs={'placeholder': 'Tu Email', 'required': True}),
+            'nombre': forms.TextInput(attrs={'placeholder': 'Tu Nombre'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'Tu Email'}),
             'telefono': forms.TextInput(attrs={'placeholder': 'Tu Teléfono'}),
-            'mensaje': forms.Textarea(attrs={'placeholder': 'Tu Mensaje', 'required': True}),
+            'mensaje': forms.Textarea(attrs={'placeholder': 'Tu Mensaje'}),
         }

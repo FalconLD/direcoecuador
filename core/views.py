@@ -11,12 +11,6 @@ def index(request):
             form.save()
             messages.success(request, '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.')
             return redirect('index')
-        else:
-            # --- INICIO DEL CÓDIGO DE DEPURACIÓN ---
-            # Si el formulario NO es válido, imprime los errores en la terminal
-            print("El formulario no es válido")
-            print(form.errors.as_data()) 
-            # --- FIN DEL CÓDIGO DE DEPURACIÓN ---
     else:
         form = ContactoForm()
 
